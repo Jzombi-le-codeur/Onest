@@ -1,0 +1,13 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 720px;
+}
+
+.container {
+    display: flex;
+}
+
+.cta {
+    flex-basis: 33%;
+}

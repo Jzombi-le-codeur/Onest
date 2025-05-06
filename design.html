@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conception Châssis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 1000;
+            left: 0;
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+        header .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        header .title {
+            margin: 0;
+        }
+        .initial {
+            position: static;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(180deg, #000000, #b0b5bb, #000000);
+            margin: 0;
+            padding: 0;
+            color: #FFFFFF;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            width: 100%;
+            margin: auto;
+            padding: 20px 0;
+        }
+        .section {
+            background: #333;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .sub-part {
+            display: none;
+            margin: 3drem;
+        }
+
+        .sub-part p {
+            margin: 10px 0;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation button {
+            background: #ffffff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .navigation button:hover {
+            background: #ffffff;
+        }
+
+        .navigation .left {
+            margin-left: 10px;
+        }
+
+        .navigation .right {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="initial">
+        <div class="logo">
+            <img src="Assets/Images/Logos/Dark Mode.png" alt="Logo Onest">
+            <h1 class="title"><a href="index.html">Onest</a></h1>
+        </div>
+    </header>
+    <h1>Châssis</h1>
+    <div class="section" id="section1">
+        <h2>EXPERTS</h2>
+        <div class="sub-part" id="sub-part1-1">
+            <h3>Matthieu</h3>
+            <p>Expert conception.<br>Il a modélisé la base du chassis, ainsi qu'une partie de la carrosserie.</p>
+        </div>
+        <div class="sub-part" id="sub-part1-2">
+            <h3>Wisdom</h3>
+            <p>Expert Design.<br>Il a designé la carrosserie, afin d'obtenir un résultat esthétique.</p>
+        </div>
+        <div class="sub-part" id="sub-part1-1">
+            <h3>Mathieu</h3>
+            <p>Expert Informatique.<br>Il a modélisé en grande partie la carrosserie, et apporté de l'aide à la base.</p>
+        </div>
+        <div class="navigation">
+            <button class="left" onclick="navigate('section1', -1)">&#9664;</button>
+            <button class="right" onclick="navigate('section1', 1)">&#9654;</button>
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <h2>CHASSIS</h2>
+        <p>Le chassis est structuré en 2 parties :</p>
+        <div class="sub-part" id="sub-part2-1" style="background-image: url('Assets/Images/Fonds\ Thèmes/');">
+            <h3>La base</h3>
+            <p>Les composants y sont posés.<br>Des trous permettent de poser ces composants, et de faire passer les câbles.</p>
+        </div>
+        <div class="sub-part" id="sub-part2-2">
+            <p>La carrosserie</p>
+            <p>Elle donne la forme du véhicule.<br>Elle est inspirée par le Cybertruck, imaginée pour être innovante et résistante.<br>Le panneau solaire est posé à l'arrière de la carrosserie, permettant un accès optimal à la lumière du soleil.</p>
+        </div>
+        <div class="navigation">
+            <button class="left" onclick="navigate('section2', -1)">&#9664;</button>
+            <button class="right" onclick="navigate('section2', 1)">&#9654;</button>
+        </div>
+    </div>
+    <div class="section" id="section3">
+        <h2>DEROULE</h2>
+        <div class="sub-part" id="sub-part3-1">
+            <h3>Première version de la base</h3>
+            <p>D'abord, une première version de la base a été conçue.<br>Elle permettait de poser les composants, et le panneau solaire était à l'avant.</p>
+        </div>
+        <div class="sub-part" id="sub-part3-2">
+            <h3>Deuxième version de la base</h3>
+            <p>Ensuite, une deuxième version de celle-ci a été conçue.<br>Des améliorations et corrections ont été faites, afin de mieux pouvoir placer les composants, et des trous pour pouvoir faire passer les câbles.</p>
+        </div>
+        <div class="sub-part" id="sub-part3-1">
+            <h3>Conception carrosserie</h3>
+            <p>Enfin, Wisdom a conçu une carrosserie inspirée du cybertruck,<br>permettant d'avoir un chassis esthétique et de placer correctement le panneau solaire.<br>Elle a été imprimée par Mathieu.</p>
+        </div>
+        <div class="navigation">
+            <button class="left" onclick="navigate('section3', -1)">&#9664;</button>
+            <button class="right" onclick="navigate('section3', 1)">&#9654;</button>
+        </div>
+    </div>
+    <script>
+        function navigate(sectionId, direction) {
+            const section = document.getElementById(sectionId);
+            const subParts = section.querySelectorAll('.sub-part');
+            let currentIndex = Array.from(subParts).findIndex(part => part.style.display === 'block');
+
+            // Hide all sub-parts
+            subParts.forEach(part => part.style.display = 'none');
+
+            // Update current index
+            currentIndex = (currentIndex + direction + subParts.length) % subParts.length;
+
+            // Show the corresponding sub-part
+            subParts[currentIndex].style.display = 'block';
+        }
+
+        // Show the first sub-part of each section by default
+        document.getElementById('sub-part1-1').style.display = 'block';
+        document.getElementById('sub-part2-1').style.display = 'block';
+        document.getElementById('sub-part3-1').style.display = 'block';
+    </script>
+    <script defer>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.remove('initial');
+            } else {
+                header.classList.add('initial');
+            }
+        });
+    </script>
+</body>
+</html>

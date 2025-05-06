@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rouler vers le futur</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed; /* Fixed position by default */
+            top: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+        header .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        header .title {
+            margin: 0;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+        section {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            color: white;
+        }
+        .left-section, .right-section {
+            background-size: cover;
+            background-position: center;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .cta-section {
+            background-image: url('Assets/Images/Fonds/cta.jpeg');
+        }
+        .tech-section {
+            background-image: url("Assets/Images/Fonds/techs.jpeg");
+        }
+        .solaire-section {
+            background-image: url("Assets/Images/Fonds/solaire.jpeg");
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%; /* Ensure content takes full width of its container */
+            box-sizing: border-box;
+            text-align: left;
+        }
+        .content-right {
+            margin-left: auto;
+            text-align: right;
+        }
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: white;
+            color: #1a1a1a;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Assets/Images/Logos/Dark Mode.png" alt="Logo Onest">
+            <h1 class="title">Onest</h1>
+        </div>
+    </header>
+    <main>
+        <section class="left-section cta-section">
+            <div class="content">
+                <h2>Rouler vers le futur</h2>
+                <button>Explorer</button>
+            </div>
+        </section>
+        <section class="right-section tech-section">
+            <div class="content content-right">
+                <h2>Technologies</h2>
+                <ul>
+                    <li><strong>Contrôle à distance</strong><br>Pilotez le véhicule jusqu'à 10m grâce au bluetooth.</li>
+                    <li><strong>Système embarqué custom</strong><br>Le système embarqué assure innovation et réactivité.</li>
+                    <li><strong>Virages précis</strong><br>Le servomoteur garantit des changements de direction fluides et instantanés.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="left-section solaire-section">
+            <div class="content">
+                <h2>Vitesse pure</h2>
+                <p>
+                    Onest intègre des panneaux solaires.
+                    L’utilisation de l’énergie solaire nous permet de réduire notre empreinte carbone,
+                    tout en nous permettant de continuer d’innover.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer style="text-align: center;">
+        <a href="historique.html">Historique</a>
+    </footer>
+</body>
+</html>
